@@ -43,7 +43,6 @@ public class TestApi {
 		workRepository.save(work);
 		List<WorkDto> ListWorkNew = workRepository.findAll();
 		assertThat(ListWorkCurent.size() < ListWorkNew.size());
-
 	}
 
 	@Test
@@ -55,7 +54,6 @@ public class TestApi {
 		workRepository.save(workUpdate);
 		WorkDto workAfterUpdate = workRepository.findAllById(workRepository.findAll().size());
 		assertThat(!workCurrent.getWorkName().equals(workAfterUpdate.getWorkName()));
-
 	}
 
 	@Test
@@ -64,7 +62,6 @@ public class TestApi {
 		workRepository.deleteById(ListWorkCurent.size());
 		List<WorkDto> ListWorkDelete = workRepository.findAll();
 		assertThat(ListWorkCurent.size() > ListWorkDelete.size());
-
 	}
 
 }
