@@ -15,56 +15,64 @@ public class WorkDto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int id;
 	@Column(name = "WORKNAME", length = 50, nullable = true)
-	public String WorkName;
+	public String workName;
 	@Column(name = "STARTINGDATE", nullable = true)
-	public String StartingDate;
+	public String startingDate;
 	@Column(name = "ENDINGDATE", nullable = true)
-	public String EndingDate;
+	public String endingDate;
 	@Column(name = "STATUS", length = 10, nullable = true)
-	public String Status;
+	public String status;
 	
 	public WorkDto() {
-		super();
-		// TODO Auto-generated constructor stub
 	}
+	
 	public WorkDto(int id, String workName, String startingDate, String endingDate, String status) {
-		super();
 		this.id = id;
-		WorkName = workName;
-		StartingDate = startingDate;
-		EndingDate = endingDate;
-		Status = status;
+		this.workName = workName;
+		this.startingDate = startingDate;
+		this.endingDate = endingDate;
+		this.status = status;
 	}
+
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	public String getWorkName() {
-		return WorkName;
+		return workName;
 	}
+
 	public void setWorkName(String workName) {
-		WorkName = workName;
+		this.workName = workName;
 	}
+
 	public String getStartingDate() {
-		return StartingDate;
+		return startingDate;
 	}
+
 	public void setStartingDate(String startingDate) {
-		StartingDate = startingDate;
+		this.startingDate = startingDate;
 	}
+
 	public String getEndingDate() {
-		return EndingDate;
+		return endingDate;
 	}
+
 	public void setEndingDate(String endingDate) {
-		EndingDate = endingDate;
+		this.endingDate = endingDate;
 	}
+
 	public String getStatus() {
-		return Status;
+		return status;
 	}
+
 	public void setStatus(String status) {
-		Status = status;
+		this.status = status;
 	}
+	
 	
 	
 }
