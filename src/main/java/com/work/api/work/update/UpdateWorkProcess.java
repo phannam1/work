@@ -17,7 +17,7 @@ public class UpdateWorkProcess {
 	@Autowired
 	WorkRepository workrepository;
 
-	@PutMapping(path = "/update/{id}")
+	@PutMapping(path = "/works/{id}")
 	UpdateWorkResponse RegistWork(@RequestBody UpdateWorkRequest req, @PathVariable int id) {
 		UpdateWorkResponse res = new UpdateWorkResponse();
 		UpdateWork(res, req, id);

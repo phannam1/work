@@ -14,7 +14,7 @@ public class AddWorkProcess {
 	@Autowired
 	WorkRepository workrepository;
 
-	@PostMapping(path = "/regist" )
+	@PostMapping(path = "/works" )
 	 AddWorkResponse RegistWork(@RequestBody AddWorkRequest req) {
 		AddWorkResponse res = new AddWorkResponse();
 		res.NewWork = workrepository.save(req.work);

@@ -14,7 +14,7 @@ public class GetWorkProcess {
 	@Autowired
 	WorkRepository workrepository;
 
-	@GetMapping(path = "/getall")
+	@GetMapping(path = "/works")
 	GetWorkResponse RegistWork(@RequestBody GetWorkRequest req) {
 		GetWorkResponse res = new GetWorkResponse();		
 		res.ListWork = workrepository.findAllListWorkOrderByReqSort(req.ReqSort,req.ReqPagination);

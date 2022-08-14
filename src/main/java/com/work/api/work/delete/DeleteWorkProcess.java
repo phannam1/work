@@ -16,7 +16,7 @@ public class DeleteWorkProcess {
 	@Autowired
 	WorkRepository workrepository;
 
-	@DeleteMapping(path = "/delete/{id}")
+	@DeleteMapping(path = "/works/{id}")
 	DeleteWorkResponse RegistWork( @PathVariable int id) {
 		DeleteWorkResponse res = new DeleteWorkResponse();
 		WorkDto WorkUpdate =  workrepository.findAllById(id);
